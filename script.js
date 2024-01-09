@@ -26,10 +26,13 @@ $(document).ready(function () {
         // each row should have a save button so I can store the event
 
     for (var hour= 9; hour <= 17; hour++) {
+
         var timeBlock = $("<div>").addClass("row time-block");
-        var hourBlock = $("<div>").addClass("hour").text(dayjs().hour(hour).format("hA"));
-        var textArea = $("<textarea>").addClass("description");
-        var saveBtn = $("<button>").addClass("saveBtn").html("<i class").html("<i class='fas fa-save'></i>");
+
+        // create 3 columns within each row 
+        var hourBlock = $("<div>").addClass("col-md-1 hour d-flex align-items-center justify-content-end").text(dayjs().hour(hour).format("hA"));
+        var textArea = $("<textarea>").addClass("col-md-10 description");
+        var saveBtn = $("<button>").addClass("col-md-1 saveBtn").html("<i class").html("<i class='fas fa-save'></i>");
     
     // append the elements to the time block
 
