@@ -27,7 +27,7 @@ The calendar must contain the following requirements:
 * Persist events between refreshes of a page
 
 ## Link to deployed application
-https://lisaspencer1997.github.io/Work-Day-Scheduler
+https://lisaspencer1997.github.io/Work-Day-Scheduler/code/index.html
 
 ## Screen Recordings
 This screen recording shows the main functions. We can input an event into the text area, click 'save' and the page doesn't remove when refreshed. 

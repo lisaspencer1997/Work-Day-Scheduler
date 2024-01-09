@@ -25,7 +25,7 @@ $(document).ready(function () {
         // each text area should have a description
         // each row should have a save button so I can store the event
 
-    for (var hour= 16; hour <= 23; hour++) {
+    for (var hour= 9; hour <= 24; hour++) {
 
         var timeBlock = $("<div>").addClass("row time-block");
 
@@ -57,8 +57,23 @@ $(document).ready(function () {
         // block hour = extract the hour from the time block
         
         var blockHourMatch = $(this).find(".hour").text().match(/(\d+)(?:\s*([apAP])\.?[mM]\.?)/);
-        var blockHour = blockHourMatch ? parseInt(blockHourMatch[1]) + (blockHourMatch[2].toLowerCase() === 'p' ? 12 : 0) : NaN;
-    
+        
+        // var blockHour = blockHourMatch ? parseInt(blockHourMatch[1]) + (blockHourMatch[2].toLowerCase() === 'p' ? 12 : 0) : NaN;
+
+        var blockHour = blockHourMatch ? dayjs().hour(parseInt(blockHourMatch[1]) + (blockHourMatch[2].toLowerCase() === 'p' ? 12 : 0)).hour() : NaN;
+        
+        if (blockHour === 0) {
+            blockHour = 12;
+        } else if (blockHour === 12) {
+            blockHour = 0;
+        }
+
+        console.log("Block hour: " + blockHour)
+        console.log("Current hour: " + currentHour)
+
+        // need to change the midnight-midday issue
+
+        
 
         // if the block hour is less than current hour:
 
