@@ -47,15 +47,46 @@ $(document).ready(function () {
 // TODO: Color-code each time block based on past, present, and future when the time block is viewed.
 
     // for each time block
+
+    $(".time-block").each(function() {
+ 
         // the current hour = get current hour using Day.js
+
+        var currentHour = dayjs().hour();
+    
         // block hour = extract the hour from the time block
 
+        var blockHour = parseInt($(this).find(".hour").text());
+
+
         // if the block hour is less than current hour:
+
+        if (blockHour < currentHour) {
+        
             // add 'past' class (which will be red) to the time block
+
+            $(this).addClass("past");
+
         // else if block hour is equal to current hour:
+
+        } else if (blockHour === currentHour) {
+
             // add 'present' class (which will be amber) to the time block
+
+            $(this).addClass("present");
+
         // else
+
+        } else {
+
             // add 'future' class (which will be green) to the time block
+
+            $(this).addClass("future");
+
+        }
+
+    });
+
 
 // TODO: Allow a user to enter an event when they click a time block
 
