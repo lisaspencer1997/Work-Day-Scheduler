@@ -88,23 +88,28 @@ $(document).ready(function () {
 
     });
 
-
-// TODO: Allow a user to enter an event when they click a time block
-
-    // add a click event to the description (textarea) element to allow input
-    
-
 // TODO: Save the event in local storage when the save button is clicked in that time block.
 
     //on save button click 
+
+    $(".saveBtn").on("click", function () {
+
         // get the evnt text from the corresponding text area
+
+        var eventText = $(this).siblings(".description").val();
+
         // get the hour from the time block
 
-    // save the event to local storage
-        // key - hour
-        // value - event text
+        var eventHour = $(this).siblings(".hour").text();
 
-    // end on save button click
+    // save the event to local storage
+
+        localStorage.setItem(eventHour, eventText);
+
+
+    })
+
+        
 
 // TODO: Persist events between refreshes of a page
 
