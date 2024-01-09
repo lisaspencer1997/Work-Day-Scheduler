@@ -32,11 +32,11 @@ https://lisaspencer1997.github.io/Work-Day-Scheduler
 ## Screen Recordings
 This screen recording shows the main functions. We can input an event into the text area, click 'save' and the page doesn't remove when refreshed. 
 
-![](../Work-Day-Scheduler/documentation/ScreenRecording1.gif)
+![](ScreenRecording1.gif)
 
 This screen recording shows the time changing. When we refresh the page at the hour that the time changes, we can see that the red bar has shifted to the new hour slot. And yet, the event text has not changed. 
 
-![](../Work-Day-Scheduler/documentation/ScreenRecording2.gif)
+![](ScreenRecording2.gif)
 
 ## Support
 Contact me on lisa-spencer@outlook.com if something is not working as intended.
