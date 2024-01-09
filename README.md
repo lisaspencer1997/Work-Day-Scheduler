@@ -39,6 +39,7 @@ Contact me on lisa-spencer@outlook.com if something is not working as intended.
 * https://day.js.org/docs/en/plugin/advanced-format
 * https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-save
 * https://stackoverflow.com/questions/35163164/how-to-center-content-in-a-bootstrap-column
+* https://stackoverflow.com/questions/7536755/regular-expression-for-matching-hhmm-time-format
 
 
 

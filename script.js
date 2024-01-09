@@ -25,7 +25,7 @@ $(document).ready(function () {
         // each text area should have a description
         // each row should have a save button so I can store the event
 
-    for (var hour= 9; hour <= 17; hour++) {
+    for (var hour= 16; hour <= 23; hour++) {
 
         var timeBlock = $("<div>").addClass("row time-block");
 
@@ -55,9 +55,10 @@ $(document).ready(function () {
         var currentHour = dayjs().hour();
     
         // block hour = extract the hour from the time block
-
-        var blockHour = parseInt($(this).find(".hour").text());
-
+        
+        var blockHourMatch = $(this).find(".hour").text().match(/(\d+)(?:\s*([apAP])\.?[mM]\.?)/);
+        var blockHour = blockHourMatch ? parseInt(blockHourMatch[1]) + (blockHourMatch[2].toLowerCase() === 'p' ? 12 : 0) : NaN;
+    
 
         // if the block hour is less than current hour:
 
