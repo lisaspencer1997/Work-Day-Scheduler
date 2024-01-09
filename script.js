@@ -1,8 +1,15 @@
 // pseudocode notes first
 
+$(document).ready(function () {
+
+
 // TODO: Display the current day at the top of the calender when a user opens the planner.
+    
 
     // add the text of the current day using jQuery dayjs
+
+    $("#currentDay").text("Today is " + dayjs().format("dddd D MMMM"));
+
     // format like this "Tuesday 9 January 2024"
 
 // TODO: Present time blocks for standard business hours when the user scrolls down.
@@ -55,3 +62,6 @@
 
     // if a saved event is found:
         // set the value of the description textarea i the time block to the saved event 
+    
+    
+})
