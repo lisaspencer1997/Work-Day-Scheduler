@@ -7,22 +7,39 @@ $(document).ready(function () {
     
 
     // add the text of the current day using jQuery dayjs
-
-    $("#currentDay").text("Today is " + dayjs().format("dddd D MMMM"));
-
     // format like this "Tuesday 9 January 2024"
+    
+    $("#currentDay").text("Today is " + dayjs().format("dddd, D MMMM YYYY"));
+
+
 
 // TODO: Present time blocks for standard business hours when the user scrolls down.
 
     // create a variable container for the time block
+
+    var container = $(".container");
+
     // create a for loop with the following inside:
         // variable of hours = 9am - 5pm
         // each time should be in a row
         // each text area should have a description
         // each row should have a save button so I can store the event
+
+    for (var hour= 9; hour <= 17; hour++) {
+        var timeBlock = $("<div>").addClass("row time-block");
+        var hourBlock = $("<div>").addClass("hour").text(dayjs().hour(hour).format("hA"));
+        
+    
     
     // append the elements to the time block
+
+    timeBlock.append(hourBlock);
+
     // append the time block to the container
+
+    container.append(timeBlock);
+
+    }
 
 // TODO: Color-code each time block based on past, present, and future when the time block is viewed.
 
