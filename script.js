@@ -28,12 +28,12 @@ $(document).ready(function () {
     for (var hour= 9; hour <= 17; hour++) {
         var timeBlock = $("<div>").addClass("row time-block");
         var hourBlock = $("<div>").addClass("hour").text(dayjs().hour(hour).format("hA"));
-        
-    
+        var textArea = $("<textarea>").addClass("description");
+        var saveBtn = $("<button>").addClass("saveBtn").html("<i class").html("<i class='fas fa-save'></i>");
     
     // append the elements to the time block
 
-    timeBlock.append(hourBlock);
+    timeBlock.append(hourBlock, textArea, saveBtn);
 
     // append the time block to the container
 
